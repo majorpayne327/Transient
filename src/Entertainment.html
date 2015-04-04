@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entertainment</title>
+        
+        <link rel="stylesheet" href="../Resources/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../Resources/HomePageStyle.css">
+        <link rel="stylesheet" href="../Resources/entertainment.css">
+        
+    </head>
+    <body>
+    	<header class="container-fluid headerWhole">
+        <div class="headerLogo">
+            <div class="logo">
+                <img src="../Resources/TransientLogo.png" alt="Transient Logo" class="img-circle logoImg">
+                <div class="logoTxt">Transient</div>
+            </div>
+        </div>
+
+        <div class="input-group headerSearchBar" style="width:30%;float:right;">
+            <input type="text" class="form-control" placeholder="'Mexican food', 'Bars', 'Parks'...">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Distance <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li><a href="#">1 mile</a></li>
+                    <li><a href="#">5 mile</a></li>
+                    <li><a href="#">10 mile</a></li>
+                    <li><a href="#">25 mile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Switch to km?</a></li>
+                </ul>
+                <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <div>
+        <div class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>Entertainment</li>
+                <li>Dining</li>
+                <li>Events</li>
+                <li>Emergency Services</li>
+            </ul>
+        </div>
+        
+        <!-- Bootstrap Carosel -->
+        <div id="panel-container">
+        <div id="entertainment-options" class="panel panel-default">
+        		<div class="panel-heading" style="background: #2f2f2f;color:white;">
+					<h2 class="panel-title">Entertainment</h2>
+            </div>
+            <div class="panel-body">
+               <div id="carouselDining" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                      <li data-target="#carouselDining" data-slide-to="0" class="active"></li>
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                          <img class="carouselPic" src="../Resources/locationPics/lazer_base.png" alt="Lazer Base offers fun in many forms, including lazers and arcade games!">
+                          <div class="carousel-caption">Lazer Base</div>
+                      </div>
+                  </div>
+                    
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carouselDining" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#carouselDining" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+               	</a>
+            	</div>
+         	</div>
+
+				<div class="panel-footer">
+					<form id="filter-selector">
+            		Filter By: 
+            		<input type="radio" name="filter">By Rating
+            		<input type="radio" name="filter">By Proximity
+        			</form><!-- end filter-selector -->
+        
+        			<dl id="options">
+            		<dd><a href="lazer_base.html">Lazer Base</a></dd>
+            		<dd><a href="">Jurassic Park</a></dd>
+            		<dd><a href="">Andy's Room</a></dd>
+            		<dd><a href="">Camelot</a></dd>
+            		<dd><a href="">Lovin' Cup</a></dd>
+        			</dl><!-- end options -->
+				</div>
+			</div>
+		</div>
+    </div>
+         
+        
+    </body>
+</html>
