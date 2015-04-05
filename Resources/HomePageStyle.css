@@ -1,17 +1,38 @@
 body{
     background-color:#9f9f9f;
 }
+a{
+    font-family: Tikal;
+    color:#f5f5f5;
+    background:#3f3f3f;
+    border-color:#1f1f1f;
+    border-top: 1px solid #f5f5f5;
+}
+a:focus{
+    background:#f5f5f5;
+    color:#2f2f2f;
+}
+a:hover{
+    background:#f5f5f5;
+    color:#2f2f2f;
+}
 @font-face {
     font-family: 'Andro'; /*a name to be used later*/
     src: url('bootstrap-3.3.4-dist/fonts/Androgyne_TB.otf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'Tikal';
+    src:url('bootstrap-3.3.4-dist/fonts/TikalSans-Medium-webfont.ttf');
 }
 .profThumbnail{
     width:100px;
     heigh:100px;
 }
 .allCategories{
+    
     float:right;
     width:70%;
+    margin-left:-20px;
 }
 .headerWhole{
     background-image:url('locationPics/Perth-night-panorama.jpg');
@@ -28,7 +49,7 @@ body{
     float:right;
 }
 .hoursTable{
-    width:30%;
+    width:100%;
     
 }
 .logo{
@@ -46,11 +67,6 @@ body{
     font-size: 45px;
     color:#f5f5f5;
 }
-.navbar{
-    float:left;
-    height: 100%;
-    width:20%
-}
 .carouselPic{
     margin-left: auto;
     margin-right: auto;
@@ -61,20 +77,88 @@ body{
 .panel-body{
     background: #3f3f3f
 }
+
 .storePageBody{
-    width:80%;
+    width:85%;
     float:right;
-    
 }
 #entertainmentMain{
-    width:80%;
+    width:85%;
     float:right;
 }
 #diningMain{
-    width:80%;
+    width:85%;
     float:right;
 }
 #eventsMain{
-    width:80%;
+    padding-top:1.5%;
+    width:85%;
     float:right;
+}
+.sidebar {
+    display: none;
+    width:15%;
+    height:100%;
+    margin-bottom: 100%;
+}
+@media {
+    .sidebar {
+        position: absolute;
+        padding-top:0%;
+        padding-right: 0%;
+        padding-left: 0%;
+        background:#3f3f3f;
+        padding-bottom:200%;
+        color:whitesmoke;
+        z-index: 1000;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
+        border-right: 1px solid #eee;
+        
+    }
+}
+.carouselHeading{
+    font-size:24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family:Andro;
+}
+.navPic{
+    width:20px;
+    height:20px;
+}
+.navAd{
+    padding-left:10%;
+    margin-left: auto;
+    margin-right: auto;
+    width:85%;
+}
+.navAd2{
+    padding-top:5%;
+    padding-left:10%;
+    margin-left: auto;
+    margin-right: auto;
+    width:85%;
+    
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    background:#d0d0d0;
+    color:#2f2f2f;
+}
+
+.mapPic{
+    width:225px;
+    height:225px;
+    float:left;
+    
+}
+.hoursDiv{
+    float:left;
+    padding-right:70%;
+}
+.reviewsDiv{
+    float:left;
 }
