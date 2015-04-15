@@ -1,0 +1,13 @@
+{
+  "name": "Transient",
+  "version": "1.0.0",
+  "description": "Transient Project Application", 
+  "devDependencies": {
+    "http-server":"^0.6.1"
+  },
+  "scripts": {
+      "start": "http-server ./app -p 8000"
+  }
+}
+
+
