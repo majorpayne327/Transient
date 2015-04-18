@@ -1,0 +1,51 @@
+<head class="container-fluid headerWhole">
+		<!--   
+    <div class="headerLogo">
+        <div class="logo">
+            <img src="images/TransientLogo.png" alt="Transient Logo" class="img-circle logoImg">
+            <div class="logoTxt">Transient</div>
+        </div>
+    </div>
+	 -->
+    <div class="input-group headerSearchBar" style="width:30%;float:right;">
+        <input type="text" class="form-control" placeholder="'Mexican food', 'Bars', 'Parks'...">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Distance <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="#">1 mile</a></li>
+                <li><a href="#">5 mile</a></li>
+                <li><a href="#">10 mile</a></li>
+                <li><a href="#">25 mile</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Switch to km?</a></li>
+            </ul>
+            <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</head>    
+
+<div class="container-fluid">
+    <div class = "row" style="float:left;">
+        <div class = "col-md-3 sidebar">
+            <ul class = "nav nav-sidebar">
+                <li><a href = "#">Home <span class = "sr-only">(current)</span></a></li>
+                <li class = "active"><a href = ""><img src="images/TransientIcon.ico" class="navPic">Entertainment</a></li>
+                <li><a href = "">Dining</a></li>
+                <li><a href = "">Events</a></li>
+                <li><a href = "">Emergency Services</a></li>
+            </ul>
+            <br>
+            <img class="navAd" src="images/ad2.jpg">
+            <br>
+            <img class="navAd2" src="images/ad1.jpg">
+        </div>
+    </div>
+    
+    <div ui-view>
+        <!-- Add nested view -->    
+    </div>
+</div>

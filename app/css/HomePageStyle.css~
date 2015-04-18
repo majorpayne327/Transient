@@ -35,7 +35,7 @@ a:hover{
     margin-left:-20px;
 }
 .headerWhole{
-    background-image:url('images/locationPics/Perth-night-panorama.jpg');
+    background-image:url('locationPics/Perth-night-panorama.jpg');
     overflow: visible;
 }
 .headerLogo{

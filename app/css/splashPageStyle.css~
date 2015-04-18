@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: 'Andro'; /*a name to be used later*/
-    src: url('bootstrap-3.3.4-dist/fonts/Androgyne_TB.otf'); /*URL to font*/
+    src: url('/lib/bootstrap-3.3.4-dist/fonts/Androgyne_TB.otf'); /*URL to font*/
 }
 body{
     background-image:url('/images/splashBackground.jpg');
