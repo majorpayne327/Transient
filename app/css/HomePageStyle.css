@@ -18,11 +18,11 @@ a:hover{
 }
 @font-face {
     font-family: 'Andro'; /*a name to be used later*/
-    src: url('bootstrap-3.3.4-dist/fonts/Androgyne_TB.otf'); /*URL to font*/
+    src: url('/lib/bootstrap-3.3.4-dist/fonts/Androgyne_TB.otf'); /*URL to font*/
 }
 @font-face {
     font-family: 'Tikal';
-    src:url('bootstrap-3.3.4-dist/fonts/TikalSans-Medium-webfont.ttf');
+    src:url('/lib/bootstrap-3.3.4-dist/fonts/TikalSans-Medium-webfont.ttf');
 }
 .profThumbnail{
     width:100px;
@@ -35,7 +35,7 @@ a:hover{
     margin-left:-20px;
 }
 .headerWhole{
-    background-image:url('images/locationPics/Perth-night-panorama.jpg');
+    background-image:url('/images/locationPics/Perth-night-panorama.jpg');
     overflow: visible;
 }
 .headerLogo{
