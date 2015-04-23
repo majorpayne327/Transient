@@ -15,7 +15,7 @@
     src: url('/lib/bootstrap-3.3.4-dist/fonts/Androgyne_TB.otf'); /*URL to font*/
 }
 body{
-    background-image:url('/images/splashBackground.jpg');
+    background-image:url('/images/background.jpg');
     
 }
 .activeMi{
