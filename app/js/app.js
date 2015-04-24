@@ -15,23 +15,28 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
+	}).state('result.user', {
+		url: '/user',
+		templateUrl: '/js/user/user.html',
+		data: { 
+			css: ['/css/HomePageStyle.css']
+		}
 	}).state('result.results', {
 		url: '/{location}',
 		templateUrl: '/js/home/HomePage.html',
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
-	}).state('result.category', {
-		url: '/{location}/{category}',
-		templateUrl: '/js/entertainment/Entertainment.html',
+	}).state('result.searchterms', {
+		url: '/{location}/{result}',
+		controller: 'CommonSearchTermController',
+		templateUrl: function($stateParams) {
+			return '/js/' + $stateParams.result + '/' + $stateParams.result + '.html'			
+		},
 		data: { 
-			css: ['/css/entertainment.css']
-		}
-	}).state('result.store', {
-		url: '/{location}/{category}/{store}',
-		templateUrl: '/js/diner/JaysDiner.html',
-		data: { 
-			css: ['/css/storepage.css']
+			css: function($stateParams) {
+				return '/css/' + $stateParams.result + '.css'	;		
+			}
 		}
 	});
 	
