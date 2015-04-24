@@ -1,27 +1,10 @@
-<div id="allCategories" ng-controller="HomeController as homeCtrl">
-    <!--Entertainment Section-->
-    <div id="entertainmentMain" class="panel panel-default">
+<div id="panel-container">
+    <div class="panel panel-default storePageBody" >
         <div class="panel-heading" style="background: #2f2f2f;color:white;">
-            <h3 class="carouselHeading">{{homeCtrl.pageTitle}}</h3>
+            <h3 class="carouselHeading">Transient Feed</h3>
         </div>
-
-        <div class="panel-body">
-            <carousel interval=0 id="carouselEntertainment">
-                <!-- Wrapper for slides -->
-                <slide ng-repeat="slide in homeCtrl.slides" active="slide.active">
-                    <img class="carouselPic" ng-src="{{slide.image}}">
-                    <div class="carousel-caption">
-                        {{slide.title}}
-                        <br>
-                        <p>{{slide.descr}}</p>
-                    </div>
-                </slide>
-            </carousel>
-        </div>
-
-        <h3 style="font-family: andro"> Transient Feed</h3>
-            <table class="table table-striped">
-                <tbody>
+        <table class="table table-striped">
+            <tbody>
                 <tr>
                     <th>
                         TheColtr0n
@@ -97,8 +80,53 @@
                         <small class="SmallFeedText">18hr</small>
                     </td>
                 </tr>
-                </tbody>
-            </table>
-        </div>
+                <tr>
+                    <th>
+                        RibsFan94
+                        <br>
+                        <img class="profThumbnail" src="/images/userPics/underwood.jpg">
+                    </th>
+                    <td>
+                        <br>
+                        <br>
+                        Come on down to Freddy's for ribs tonight.
+                        <br>
+                        <br>
+                        <small class="SmallFeedText">1d 7hr</small>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        HorseLord69
+                        <br>
+                        <img class="profThumbnail" src="/images/userPics/drogo.jpg">
+                    </th>
+                    <td>
+                        <br>
+                        <br>
+                        Hash yer ray tih loy alegri zhey vikeesi? Vo mawizzi, vo alegri. Hash tihi vekhi she nhare yeroon? Hash tih?
+                        <br>
+                        <br>
+                        <small class="SmallFeedText">1d 15hr</small>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        TheDeanliest
+                        <br>
+                        <img class="profThumbnail" src="/images/userPics/dean.png">
+                    </th>
+                    <td>
+                        <br>
+                        <br>
+                        Party time at Greendale.
+                        <br>
+                        <br>
+                        <small class="SmallFeedText">1d 22hr</small>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
+
