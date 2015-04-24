@@ -91,8 +91,8 @@
                                         <td>
                                             <strong>{{ review.title }}</strong>
                                                 <div>
-                                                	<span ng-repeat="i in review.likes track by $index" class="glyphicon glyphicon-star"></span>
-                                                	<span ng-repeat="i in review.dislikes track by $index" class="glyphicon glyphicon-star-empty"></span>
+                                                	<span ng-repeat="i in jaysCtrl.range(review.likes) track by $index" class="glyphicon glyphicon-star"></span>
+                                                	<span ng-repeat="i in jaysCtrl.range(review.dislikes) track by $index" class="glyphicon glyphicon-star-empty"></span>
                                                 </div>
                                             <br>
                                             {{ review.descr }}
