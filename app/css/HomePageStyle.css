@@ -65,9 +65,13 @@ a:hover{
 .carouselPic{
     margin-left: auto;
     margin-right: auto;
+    padding-bottom:0;
+    margin-bottom: 0;
 }
 .carousel-inner{
     background:#1f1f1f;
+    padding-bottom:0;
+    margin-bottom: 0;
 }
 .panel-body{
     background: #3f3f3f
@@ -110,7 +114,6 @@ a:hover{
         overflow-x: hidden;
         overflow-y: hidden; /* Scrollable contents if viewport is shorter than content. */
         border-right: 1px solid #eee;
-        
     }
 }
 .carouselHeading{
@@ -154,16 +157,57 @@ a:hover{
     height:225px;
     float:left;
 }
-.hoursDiv{
-    float:left;
-    padding-right:70%;
+.hourPills{
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.hourPill{
+    background-color: dimgrey;
+    font-size:12px;
+    padding:4px;
 }
 .reviewsDiv{
     float:left;
+    width:100%;
+    margin: 0;
 }
 .loginSection{
     float:right;
 }
 .SmallFeedText{
-    color:1f1f1f;
+    color:#1f1f1f;
+}
+.carousel-caption{
+    background-color: #1f1f1f;
+    opacity: 0.75;
+    margin-bottom: 0;
+}
+.storePanelHeading{
+    font-size:24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family:Andro;
+}
+.storePanelBody{
+    background-color:#dfdfdf;
+}
+.reviewPanelBody{
+    background-color:#dfdfdf;
+    padding-bottom: 0;
+    margin:0;
+}
+.commentForm{
+    padding-top:15px;
+    padding-bottom: 15px;
+}
+
+.ratingStars{
+    font-size: 16px;
+    float:left;
+    margin-top: 5px;
+}
+.commentBox{
+overflow: hidden;
 }
