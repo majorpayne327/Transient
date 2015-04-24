@@ -1,4 +1,4 @@
-	<div class = "site-wrapper">
+	<div class = "site-wrapper" ng-controller="SearchController as searchCtrl">
 		<div class = "site-wrapper-inner">
 			<div class = "cover-container">
 				<div class = "inner cover">
@@ -9,9 +9,11 @@
 
 					<div class = "col-lg-6">
 						<div class = "input-group">
-							<input type = "text" class = "form-control" placeholder = "Enter City and State or Zip Code"></input>
-							<span class = "input-group-addon">
-								<span class = "glyphicon glyphicon-search" aria-hidden = "true"></span>
+							<input type = "text" class = "form-control" placeholder = "Enter City and State or Zip Code" ng-model="searchCtrl.searchTerm"></input>
+							<span class = "input-group-btn">
+								<button class = "btn btn-default" type="button" ng-click="searchCtrl.search()">
+									<span class = "glyphicon glyphicon-search"></span>
+								</button>
 							</span>
 						</div>
 					</div>

@@ -24,13 +24,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 	}).state('result.results', {
 		url: '/{location}',
 		templateUrl: '/js/home/HomePage.html',
-		controller: 'SearchController as searchCtrl',
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
 	}).state('result.searchterms', {
 		url: '/{location}/{result}',
-		controller: 'CommonSearchTermController',
 		templateUrl: function($stateParams) {
 			return '/js/' + $stateParams.result + '/' + $stateParams.result + '.html'			
 		},
