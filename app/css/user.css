@@ -1,0 +1,44 @@
+.panelHeader{
+    font-size:24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family:Andro;
+}
+.panelBody{
+    background: white;
+}
+.deleteFav{
+    float:right;
+    
+}
+.favThumbnail{
+    width:75px;
+    height:75px;
+}
+.profThumbnail{
+    width:150px;
+    height:150px;
+}
+.updatePic{
+    width:150px;
+}
+.userPage{
+    width:85%;
+    float:right;
+}
+.settingsPanel{
+    width:150px;
+}
+.favoritesPanel{
+    width:80%;
+    float:right;
+    
+}
+.editIcon{
+    margin-left:10px;
+    height:10px;
+    width:10px;
+}
+.profInfo{
+    float:left;
+}

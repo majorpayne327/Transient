@@ -19,7 +19,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 		url: '/user',
 		templateUrl: '/js/user/user.html',
 		data: { 
-			css: ['/css/HomePageStyle.css']
+			css: ['/css/user.css']
 		}
 	}).state('result.results', {
 		url: '/{location}',
