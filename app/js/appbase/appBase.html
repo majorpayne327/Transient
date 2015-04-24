@@ -1,8 +1,8 @@
 <header class="container-fluid headerWhole">   
     <div class="headerLogo">
         <div class="logo">
-            <img src="images/TransientLogo.png" alt="Transient Logo" class="img-circle logoImg">
-            <div class="logoTxt">Transient</div>
+            <a href="#/" ><img src="images/TransientLogo.png" alt="Transient Logo" class="img-circle logoImg">
+            <div class="logoTxt">Transient</div></a>
         </div>
     </div>
 
@@ -27,11 +27,12 @@
             </div>
         </div>
         <br>
-        <div ng-controller="LoginModalCtrl as loginModalCtrl" style="float:right;">
-            <button class="btn btn-default btn-xs" ng-click="loginModalCtrl.openLogin()">Login</button>
+        
+        <div ng-if-start="!appCtrl.loggedin" ng-controller="LoginModalCtrl as loginModalCtrl" style="float:right;">
+            <button class="btn btn-default btn-xs" ng-click="loginModalCtrl.openLogin(appCtrl.loggedin)">Login</button>
         </div>
-        <div ng-controller="RegisterModalCtrl as registerModalCtrl" style="float:right;">
-            <button class="btn btn-default btn-xs" ng-click="registerModalCtrl.openRegister()">Register</button>
+        <div ng-if-end ng-controller="RegisterModalCtrl as registerModalCtrl" style="float:right;">
+            <button class="btn btn-default btn-xs" ng-click="registerModalCtrl.openRegister(appCtrl.loggedin)">Register</button>
         </div>
     </div>
 </header>    
@@ -40,13 +41,13 @@
     <div class = "row" style="float:left;">
         <div class = "col-md-3 sidebar">
             <ul class = "nav nav-sidebar">
-                <li><a class="navLink" href = "#">Home <span class = "sr-only">(current)</span></a></li>
-                <li><a class="navLink" href="">Local Feed</a> </li>
+                <li><a class="navLink" href = "#/"> Home <span class = "sr-only">(current)</span></a></li>
+                <li><a class="navLink" href= "{{ appCtrl.feed }}">Transient Feed</a> </li>
                 <!--<li class = "active"><a href = ""><img src="images/TransientIcon.ico" class="navPic">Entertainment</a></li>-->
-                <li><a class="navLink" class="navLink" href="">Entertainment</a></li>
-                <li><a class="navLink" href = "">Dining</a></li>
-                <li><a class="navLink" href = "">Events</a></li>
-                <li><a class="navLink" href = "">Emergency Services</a></li>
+                <li><a class="navLink" href= "{{ appCtrl.entertainment }}">Entertainment</a></li>
+                <li><a class="navLink" href = "{{ appCtrl.dining }}">Dining</a></li>
+                <li><a class="navLink" href = "{{ appCtrl.events }}">Events</a></li>
+                <li><a class="navLink" href = "{{ appCtrl.emergency }}">Emergency Services</a></li>
             </ul>
             <br>
             <img class="navAd" src="images/ad2.jpg">

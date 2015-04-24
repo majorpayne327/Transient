@@ -12,6 +12,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 		}
 	}).state('result', {	
 		templateUrl: '/js/appbase/appBase.html',
+		controller: "AppBaseController as appCtrl",
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
