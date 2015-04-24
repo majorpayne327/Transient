@@ -16,9 +16,9 @@ app.controller('HomeController', function () {
 	];
 	
 	var descrs = [
-		'1 Description',
-		'2 Description',
-		'3 Description'	
+		'Come and get drinks, watch live performances, and participate in our trivia nights!',
+		'Lazer tag for the whole family! Come in for our "2-for-1" rounds on Thursday nights!',
+		'Live music and festivities, fun for the whole family'	
 	]
 	
 	self.init = function () {
