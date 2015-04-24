@@ -1,9 +1,9 @@
 var app = angular.module('transientApp');
 
-app.controller('HomeController', function ($location) {
+app.controller('HomeController', function ($location, pageTitle) {
 	var self = this;
 	
-	self.pageTitle = $location.url();
+	self.pageTitle = pageTitle;
 	
 	var titles = [
 		'Lovin\' Cup',

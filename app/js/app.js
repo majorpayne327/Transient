@@ -24,6 +24,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 	}).state('result.results', {
 		url: '/{location}',
 		templateUrl: '/js/home/HomePage.html',
+		controller: "HomeController as homeCtrl",
+		resolve: { 
+						pageTitle: function($stateParams){
+							return $stateParams.location;								
+						}
+		},
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
