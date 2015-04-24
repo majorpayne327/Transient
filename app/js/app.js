@@ -1,4 +1,4 @@
-var app = angular.module('transientApp', ['ui.router', 'uiRouterStyles']);
+var app = angular.module('transientApp', ['ui.bootstrap', 'ui.router', 'uiRouterStyles']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
@@ -29,7 +29,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 		}
 	}).state('result.searchterms', {
 		url: '/{location}/{result}',
-		controller: 'CommonSearchTermController',
 		templateUrl: function($stateParams) {
 			return '/js/' + $stateParams.result + '/' + $stateParams.result + '.html'			
 		},
@@ -37,6 +36,18 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 			css: function($stateParams) {
 				return '/css/' + $stateParams.result + '.css'	;		
 			}
+		}
+	}).state('result.feed', {
+		url: '/{location}/feed',
+		templateUrl: '/js/feed/feed.html',
+		data: { 
+			css: ['/css/HomePageStyle.css']
+		}
+	}).state('result.emergency', {
+		url: '/{location}/emergency',
+		templateUrl: '/js/emergency/emergency.html',
+		data: { 
+			css: ['/css/HomePageStyle.css']
 		}
 	});
 	
