@@ -22,6 +22,24 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
+	}).state('result.user', {
+		url: 'user/',
+		templateUrl: '/js/user/user.html',
+		data: { 
+			css: ['/css/user.css']
+		}
+	}).state('result.feed', {
+		url: 'feed/',
+		templateUrl: '/js/feed/feed.html',
+		data: { 
+			css: ['/css/HomePageStyle.css']
+		}
+	}).state('result.emergency', {
+		url: 'emergency/',
+		templateUrl: '/js/emergency/emergency.html',
+		data: { 
+			css: ['/css/HomePageStyle.css']
+		}
 	}).state('result.results', {
 		templateUrl: '/js/home/HomePage.html',
 		controller: "HomeController as homeCtrl",
@@ -38,24 +56,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 			css: function($stateParams) {
 				return '/css/' + $stateParams.result + '.css'	;		
 			}
-		}
-	}).state('result.user', {
-		url: '/user',
-		templateUrl: '/js/user/user.html',
-		data: { 
-			css: ['/css/user.css']
-		}
-	}).state('result.feed', {
-		url: '/feed',
-		templateUrl: '/js/feed/feed.html',
-		data: { 
-			css: ['/css/HomePageStyle.css']
-		}
-	}).state('result.emergency', {
-		url: '/emergency',
-		templateUrl: '/js/emergency/emergency.html',
-		data: { 
-			css: ['/css/HomePageStyle.css']
 		}
 	});
 	
