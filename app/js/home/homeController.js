@@ -1,9 +1,9 @@
 var app = angular.module('transientApp');
 
-app.controller('HomeController', function ($location, pageTitle) {
+app.controller('HomeController', function ($location, $scope, pageTitle) {
 	var self = this;
 	
-	self.pageTitle = pageTitle;
+	$scope.$parent.pageTitle = pageTitle;
 	
 	var titles = [
 		'Lovin\' Cup',

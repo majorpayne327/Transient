@@ -1,19 +1,35 @@
 var app = angular.module('transientApp')
 
+app.controller('AppBaseController', function ($location) {
+
+	var self = this;
+	
+	self.base_url = $location.url();
+	self.feed = "#" + $location.url() + "/feed";
+	self.entertainment = "#" + $location.url() + "/entertainment";
+	self.dining= "#" + $location.url() + "/dining";
+	self.events = "#" + $location.url() + "/events";
+	self.emergency = "#" + $location.url() + "/emergency";
+	
+	self.loggedin = false;
+	
+  
+});
+
 app.controller('LoginModalCtrl', function ($modal, $log) {
 
 	var self = this;
 
-  self.openLogin = function (size) {
-
+  self.openLogin = function (loggedin, size) {
     var modalInstance = $modal.open({
       templateUrl: '/js/appbase/loginModal.html',
       controller: 'LoginModalInstanceCtrl as loginInstanceCtrl',
-      size: size,
+      size: size
     });
 
     modalInstance.result.then(function () {
-    	
+		console.log(loggedin);    	
+    	loggedin = true;
     }, function () {
       $log.info('Modal dismissed at: ' + new Date());
     });
@@ -23,12 +39,15 @@ app.controller('LoginModalCtrl', function ($modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-app.controller('LoginModalInstanceCtrl', function ( $modalInstance) {
+app.controller('LoginModalInstanceCtrl', function ( $modalInstance, $location) {
 
   var self = this;
 
   self.login = function () {
+  	 loggedin = true;
+  	 $location.path('/user');    
     $modalInstance.close();
+    
   };
 
   self.cancel = function () {
@@ -59,7 +78,7 @@ app.controller('RegisterModalCtrl', function ($modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-app.controller('RegisterModalInstanceCtrl', function ( $modalInstance) {
+app.controller('RegisterModalInstanceCtrl', function ( $modalInstance, $location) {
 
   var self = this;
 
@@ -136,6 +155,9 @@ app.controller('RegisterModalInstanceCtrl', function ( $modalInstance) {
 **/
 
   self.register = function () {
+  	
+  	 $location.path('/user');
+  	 
     $modalInstance.close();
   };
 
