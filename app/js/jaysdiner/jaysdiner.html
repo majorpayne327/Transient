@@ -1,4 +1,4 @@
-        <div>
+        <div ng-controller="JaysDinerController as jaysCtrl">
             <div class="panel panel-default storePageBody">
                 <div class="panel-heading" style="background: #2f2f2f;color:white;">
                     <h3 class="carouselHeading">Jay's Diner -
@@ -81,53 +81,24 @@
 
                             <div class="reviewsDiv">
                                 <table class="table table-striped">
-                                    <tbody>
+                                    <tbody ng-repeat="review in jaysCtrl.reviews">
                                     <tr>
                                         <th>
-                                            DrCrane
+                                        	  {{ review.user }}
                                             <br>
-                                            <img class="profThumbnail" src="/images/userPics/Dr_Crane.jpg">
+                                            <img class="profThumbnail" src="{{review.image}}">
                                         </th>
                                         <td>
-                                            <strong>Quaint if you're into that sort of thing...</strong>
-                                            <div>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </div>
+                                            <strong>{{ review.title }}</strong>
+                                                <div>
+                                                	<span ng-repeat="i in review.likes track by $index" class="glyphicon glyphicon-star"></span>
+                                                	<span ng-repeat="i in review.dislikes track by $index" class="glyphicon glyphicon-star-empty"></span>
+                                                </div>
                                             <br>
-                                            
-                                            
-                                            Though not my typical fare, I did enjoy tossed salad and scrambled eg...
+                                            {{ review.descr }}
                                             <a href="#">(Read More)</a>
                                             <div class="reviewDate">
                                                 <h4><small>April, 23rd, 2015</small></h4>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>
-                                            El_Duderino98
-                                            <br>
-                                            <img class="profThumbnail" src="/images/userPics/elduderino.jpg">
-                                        </th>
-
-                                        <td>
-                                            <strong>Better burgers than In-n-Out - </strong>
-                                            <div>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </div>
-                                            <br>
-                                            Waitress was nice even though Walt was fighting her about his "1st amendm...
-                                            <a href="#">(Read More)</a>
-                                            <div class="reviewDate">
-                                                <h4><small>April, 20th, 2015</small></h4>
                                             </div>
                                         </td>
                                     </tr>
@@ -142,7 +113,7 @@
                                 <div class="row">
                                         <div class="row" id="post-review-box">
                                             <div>
-                                                <form accept-charset="UTF-8" action="" method="post" style="width:95%;margin-left: 2.5%;">
+                                                <form accept-charset="UTF-8" ng-submit="jaysCtrl.submitReview()" style="width:95%;margin-left: 2.5%;">
                                                     
                                                     <div class="ratingStars">
                                                         <h4 style="font-family: Andro">Rate Jay's Diner!</h4>
@@ -153,13 +124,11 @@
                                                         <span class="glyphicon glyphicon-star-empty"></span>
                                                     </div>
                                                     <input id="ratings-hidden" name="rating" type="hidden">
-                                                    <textarea class="form-control commentBox" cols="40" id="new-review" name="comment" placeholder="Leave a review of how your visit went here..." rows="3"></textarea>
+                                                    <textarea class="form-control commentBox" cols="40" id="new-review" name="comment" placeholder="Leave a review of how your visit went here..." rows="3" ng-model="jaysCtrl.descr"></textarea>
                                                     
                                                     <div class="text-right">
-                                                        <button class="btn btn-success" type="submit" style="margin-top: 5px;">
-                                                            <span class="glyphicon glyphicon-comment"></span>
-                                                            Publish
-                                                        </button>
+                                                        <input class="btn btn-success" type="submit" value="Publish" style="margin-top: 5px;">
+                                                        </input>
                                                     </div>
                                                 </form>
                                             </div>
