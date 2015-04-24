@@ -1,4 +1,4 @@
-var app = angular.module('transientApp', ['ui.router', 'uiRouterStyles']);
+var app = angular.module('transientApp', ['ui.bootstrap', 'ui.router', 'uiRouterStyles']);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
@@ -24,6 +24,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 	}).state('result.results', {
 		url: '/{location}',
 		templateUrl: '/js/home/HomePage.html',
+		controller: 'SearchController as searchCtrl',
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
