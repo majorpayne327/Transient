@@ -45,6 +45,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
+	}).state('result.emergency', {
+		url: '/{location}/emergency',
+		templateUrl: '/js/emergency/emergency.html',
+		data: { 
+			css: ['/css/HomePageStyle.css']
+		}
 	});
 	
 	}]);
