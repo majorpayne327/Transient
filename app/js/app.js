@@ -39,6 +39,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 				return '/css/' + $stateParams.result + '.css'	;		
 			}
 		}
+	}).state('result.feed', {
+		url: '/{location}/feed',
+		templateUrl: '/js/feed/feed.html',
+		data: { 
+			css: ['/css/HomePageStyle.css']
+		}
 	});
 	
 	}]);
