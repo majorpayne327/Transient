@@ -41,7 +41,7 @@ app.controller('LoginModalInstanceCtrl', function ( $modalInstance, $location) {
 
   self.login = function () {
   	 loggedin = true;
-  	 $location.path('/user/');    
+  	 $location.path('user/');    
     $modalInstance.close();
     
   };
@@ -152,7 +152,7 @@ app.controller('RegisterModalInstanceCtrl', function ( $modalInstance, $location
 
   self.register = function () {
   	
-  	 $location.path('/user/');
+  	 $location.path('user/');
   	 
     $modalInstance.close();
   };

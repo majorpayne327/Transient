@@ -29,13 +29,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 			css: ['/css/user.css']
 		}
 	}).state('result.feed', {
-		url: 'feed/',
+		url: '/feed/',
 		templateUrl: '/js/feed/feed.html',
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
 	}).state('result.emergency', {
-		url: 'emergency/',
+		url: '/emergency/',
 		templateUrl: '/js/emergency/emergency.html',
 		data: { 
 			css: ['/css/HomePageStyle.css']
