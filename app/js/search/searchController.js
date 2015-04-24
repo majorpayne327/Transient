@@ -1,10 +1,12 @@
-var app = angular.module('transientApp')
+var app = angular.module('transientApp');
 
-app.controller('SearchController', function () {
+app.controller('SearchController', function ($location) {
 
 	var self = this;
 	
+	self.searchTerm = "";
+	
 	self.search = function() {
-		console.log("Button Click");	
+		$location.path('/' + self.searchTerm);
 	}
 });
