@@ -8,15 +8,10 @@
         <div class="panel-body">
             <carousel interval=0 id="carouselEntertainment">
                 <!-- Wrapper for slides -->
-                <slide ng-repeat="slide in homeCtl.slides" active="slide.active">
-                    <img class="carouselPic" ng-src="{{slide.image}}" alt="Lovin' Cup features live performances and trivia nights">
+                <slide ng-repeat="slide in homeCtrl.slides" active="slide.active">
+                    <img class="carouselPic" ng-src="{{slide.image}}">
                     <div class="carousel-caption">
-                        {{slide.title}}} -
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
+                        {{slide.title}}
                         <br>
                         <p>{{slide.descr}}</p>
                     </div>

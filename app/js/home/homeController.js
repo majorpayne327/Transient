@@ -11,7 +11,7 @@ app.controller('HomeController', function () {
 	
 	var imgs = [
 		'/images/locationPics/lovinCup.jpg',
-		'/images/locationPics/lazerbase.png',
+		'/images/locationPics/lazer_base.png',
 		'/images/locationPics/lilacFestival.jpg'	
 	];
 	
