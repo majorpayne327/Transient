@@ -8,9 +8,9 @@
 
     <div class="headerSearchBar">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="'Laser Tag', 'Bars', 'Boston'...">
+            <input type="text" class="form-control" placeholder="'Laser Tag', 'Bars', 'Boston'..." ng-model="searchTerms">
             <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
                     Distance <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -21,7 +21,7 @@
                     <li class="divider"></li>
                     <li><a href="#">Switch to km?</a></li>
                 </ul>
-                <button class="btn btn-default" type="button">
+                <button class="btn btn-default" type="button" ui-sref="result.searchterms({ loc: appCtrl.baseLoc, result: searchTerms })"S>
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                 </button>
             </div>
@@ -41,13 +41,13 @@
     <div class = "row" style="float:left;">
         <div class = "col-md-3 sidebar">
             <ul class = "nav nav-sidebar">
-                <li><a class="navLink" href = "#/"> Home <span class = "sr-only">(current)</span></a></li>
-                <li><a class="navLink" href= "{{ appCtrl.feed }}">Transient Feed</a> </li>
+                <li><a class="navLink" ui-sref="result.results({ loc: appCtrl.baseLoc })" ui-sref-active="active"> Home <span class = "sr-only">(current)</span></a></li>
+                <li><a class="navLink" ui-sref="result.feed({ loc: appCtrl.baseLoc })" ui-sref-active="active">Transient Feed</a> </li>
                 <!--<li class = "active"><a href = ""><img src="images/TransientIcon.ico" class="navPic">Entertainment</a></li>-->
-                <li><a class="navLink" href= "{{ appCtrl.entertainment }}">Entertainment</a></li>
-                <li><a class="navLink" href = "{{ appCtrl.dining }}">Dining</a></li>
-                <li><a class="navLink" href = "{{ appCtrl.events }}">Events</a></li>
-                <li><a class="navLink" href = "{{ appCtrl.emergency }}">Emergency Services</a></li>
+                <li><a class="navLink" ui-sref="result.searchterms({ loc: appCtrl.baseLoc, result: appCtrl.entertain })" ui-sref-active="active">Entertainment</a></li>
+                <li><a class="navLink" ui-sref="result.dining({ loc: appCtrl.baseLoc })" ui-sref-active="active">Dining</a></li>
+                <li><a class="navLink" ui-sref="result.events({ loc: appCtrl.baseLoc })" ui-sref-active="active">Events</a></li>
+                <li><a class="navLink" ui-sref="result.emergency({ loc: appCtrl.baseLoc })" ui-sref-active="active">Emergency Services</a></li>
             </ul>
             <br>
             <img class="navAd" src="images/ad2.jpg">

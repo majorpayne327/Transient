@@ -6,7 +6,4 @@ app.controller('SearchController', function ($location) {
 	
 	self.searchTerm = "";
 	
-	self.search = function() {
-		$location.path('/' + self.searchTerm);
-	}
 });

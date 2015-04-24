@@ -1,15 +1,11 @@
 var app = angular.module('transientApp')
 
-app.controller('AppBaseController', function ($location) {
+app.controller('AppBaseController', function ($location, pageTitle) {
 
 	var self = this;
 	
-	self.base_url = $location.url();
-	self.feed = "#" + $location.url() + "/feed";
-	self.entertainment = "#" + $location.url() + "/entertainment";
-	self.dining= "#" + $location.url() + "/dining";
-	self.events = "#" + $location.url() + "/events";
-	self.emergency = "#" + $location.url() + "/emergency";
+	self.baseLoc = pageTitle;
+	self.entertain = "entertainment"
 	
 	self.loggedin = false;
 	

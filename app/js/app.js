@@ -13,29 +13,24 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 	}).state('result', {	
 		templateUrl: '/js/appbase/appBase.html',
 		controller: "AppBaseController as appCtrl",
+		url: '/{loc}',
+		resolve: { 
+						pageTitle: function($stateParams){
+							return $stateParams.loc;								
+						}
+		},		
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
-	}).state('result.user', {
-		url: '/user',
-		templateUrl: '/js/user/user.html',
-		data: { 
-			css: ['/css/user.css']
-		}
 	}).state('result.results', {
-		url: '/{location}',
 		templateUrl: '/js/home/HomePage.html',
 		controller: "HomeController as homeCtrl",
-		resolve: { 
-						pageTitle: function($stateParams){
-							return $stateParams.location;								
-						}
-		},
+		url: '/',
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
 	}).state('result.searchterms', {
-		url: '/{location}/{result}',
+		url: '/{result}',
 		templateUrl: function($stateParams) {
 			return '/js/' + $stateParams.result + '/' + $stateParams.result + '.html'			
 		},
@@ -44,14 +39,20 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 				return '/css/' + $stateParams.result + '.css'	;		
 			}
 		}
+	}).state('result.user', {
+		url: '/user',
+		templateUrl: '/js/user/user.html',
+		data: { 
+			css: ['/css/user.css']
+		}
 	}).state('result.feed', {
-		url: '/{location}/feed',
+		url: '/feed',
 		templateUrl: '/js/feed/feed.html',
 		data: { 
 			css: ['/css/HomePageStyle.css']
 		}
 	}).state('result.emergency', {
-		url: '/{location}/emergency',
+		url: '/emergency',
 		templateUrl: '/js/emergency/emergency.html',
 		data: { 
 			css: ['/css/HomePageStyle.css']

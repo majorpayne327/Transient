@@ -11,7 +11,7 @@
 						<div class = "input-group">
 							<input type = "text" class = "form-control" placeholder = "Enter City and State or Zip Code" ng-model="searchCtrl.searchTerm"></input>
 							<span class = "input-group-btn">
-								<button class = "btn btn-default" type="button" ng-click="searchCtrl.search()">
+								<button class = "btn btn-default" type="button" ui-sref="result.results({ loc: searchCtrl.searchTerm })">
 									<span class = "glyphicon glyphicon-search"></span>
 								</button>
 							</span>
