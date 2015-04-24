@@ -10,15 +10,13 @@ app.controller('JaysDinerController', function () {
 			user: 'DrCrane',
 			title: "Quaint if you're into that sort of thing...",
 			descr: "Though not my typical fare, I did enjoy tossed salad and scrambled eg...",
-			likes: 3,
-			dislikes: 2 					
+			stars: 3			
 		},{
 			image: "/images/userPics/elduderino.jpg",
 			user: 'El_Duderino98',
 			title: "Better burgers than In-n-Out - ",
 			descr: "Waitress was nice even though Walt was fighting her about his \"1st amendm...",
-			likes: 4,
-			dislikes: 1				
+			stars: 4			
 		}
 	];
 	
@@ -30,8 +28,7 @@ app.controller('JaysDinerController', function () {
 	self.user = "TheColtr0n";
 	self.title = "Super Amazing Review...";
 	self.descr = "";
-	self.likes = 3;
-	self.dislikes = 2;
+	self.rate = 0;
 	
 	self.submitReview = function () {
 		var review = {
@@ -39,12 +36,12 @@ app.controller('JaysDinerController', function () {
 			user: self.user,
 			title: self.title,
 			descr: self.descr,
-			likes: self.likes,
-			dislikes: self.dislikes			
+			stars: self.rate	
 		}
 		
 		self.reviews.push(review);
 		
 		self.descr = "";
+		self.ratingStars = 0;
 	};	
 });

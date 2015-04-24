@@ -90,10 +90,7 @@
                                         </th>
                                         <td>
                                             <strong>{{ review.title }}</strong>
-                                                <div>
-                                                	<span ng-repeat="i in jaysCtrl.range(review.likes) track by $index" class="glyphicon glyphicon-star"></span>
-                                                	<span ng-repeat="i in jaysCtrl.range(review.dislikes) track by $index" class="glyphicon glyphicon-star-empty"></span>
-                                                </div>
+                                                <rating ng-model="review.stars" max="5" readonly="true" on-leave="overStar = null"></rating>
                                             <br>
                                             {{ review.descr }}
                                             <a href="#">(Read More)</a>
@@ -114,16 +111,10 @@
                                         <div class="row" id="post-review-box">
                                             <div>
                                                 <form accept-charset="UTF-8" ng-submit="jaysCtrl.submitReview()" style="width:95%;margin-left: 2.5%;">
-                                                    
                                                     <div class="ratingStars">
                                                         <h4 style="font-family: Andro">Rate Jay's Diner!</h4>
-                                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                                        <span class="glyphicon glyphicon-star-empty"></span>
+																		  <rating ng-model="jaysCtrl.rate" max="5" readonly="false" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>                                                  
                                                     </div>
-                                                    <input id="ratings-hidden" name="rating" type="hidden">
                                                     <textarea class="form-control commentBox" cols="40" id="new-review" name="comment" placeholder="Leave a review of how your visit went here..." rows="3" ng-model="jaysCtrl.descr"></textarea>
                                                     
                                                     <div class="text-right">
