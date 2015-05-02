@@ -26,7 +26,7 @@ app.controller('JaysDinerController', function () {
 	
 	self.image = "/images/userPics/ColtonProfile.jpg";
 	self.user = "TheColtr0n";
-	self.title = "Super Amazing Review...";
+	self.title = "";
 	self.descr = "";
 	self.rate = 0;
 	

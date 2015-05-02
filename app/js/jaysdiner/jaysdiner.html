@@ -115,6 +115,9 @@
                                                         <h4 style="font-family: Andro">Rate Jay's Diner!</h4>
 																		  <rating ng-model="jaysCtrl.rate" max="5" readonly="false" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>                                                  
                                                     </div>
+                                                    <div> Title: </div>
+                                                    <input class="form-control" type="text" name="title" placeholder="Review Title" ng-model=jaysCtrl.title>
+                                                    <div> Description: </div>
                                                     <textarea class="form-control commentBox" cols="40" id="new-review" name="comment" placeholder="Leave a review of how your visit went here..." rows="3" ng-model="jaysCtrl.descr"></textarea>
                                                     
                                                     <div class="text-right">
