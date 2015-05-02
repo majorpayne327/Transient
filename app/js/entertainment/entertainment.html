@@ -1,6 +1,6 @@
 
         <!-- Bootstrap Carosel -->
-        <div id="panel-container">
+        <div id="panel-container" ng-controller="EntertainmentController as EntertainCtrl">
         <div class="panel panel-default storePageBody" >
         		<div class="panel-heading" style="background: #2f2f2f;color:white;">
 					<h3 class="carouselHeading">Entertainment</h3>
@@ -40,60 +40,13 @@
 
 
                     <table class="table table-striped table-condensed hoursTable">
-                        <tbody>
+                        <tbody ng-repeat="loc in EntertainCtrl.locations">
                         <tr>
                             <th>
-                                Lazer Base -
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
+                                {{loc.title}} -
+                                <rating ng-model="loc.rating" max="5" readonly="true" on-leave="overStar = null"></rating>
                             </th>
-                            <td>Lazer tag for the whole family! Come in for our "2-for-1" rounds on Thursday nights!</td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Jurassic Park -
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </th>
-                            <td>After closing its doors due to safety concerns for a 3rd time, Jurassic Park is back and open for business!</td></tr>
-                        <tr>
-                            <th>
-                                Bowl-a-Rowl -
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </th>
-                            <td>Come for bowling, stay for the grub!</td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Camelot -
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </th>
-                            <td>Camelot! Watch as the knights of The Round Table dance and delight you, 'tis truly a silly place!</td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Lovin' Cup -
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </th>
-                            <td>Come and get drinks, watch live performances, and participate in our trivia nights!</td>
+                            <td>{{ loc.descr }}</td>
                         </tr>
                         <tr>
                             <th><em style="font-size:12px;">Click to see more</em></th>
