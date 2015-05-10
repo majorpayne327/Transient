@@ -34,13 +34,13 @@
 				<div class="panel-footer">
 					<form id="filter-selector">
             		Filter By: 
-            		<input type="radio" name="filter">By Rating
-            		<input type="radio" name="filter">By Proximity
+            		<input type="radio" name="filter" ng-model="jaysCtrl.sorting" value="'rating'">By Rating
+            		<input type="radio" name="filter" ng-model="jaysCtrl.sorting" value="'distance'">By Proximity
         			</form><!-- end filter-selector -->
 
 
                     <table class="table table-striped table-condensed hoursTable">
-                        <tbody ng-repeat="loc in EntertainCtrl.locations">
+                        <tbody ng-repeat="loc in EntertainCtrl.locations | orderBy:jaysCtrl.sorting:true">
                         <tr>
                             <th>
                                 {{loc.title}} -

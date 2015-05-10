@@ -44,4 +44,10 @@ app.controller('JaysDinerController', function () {
 		self.descr = "";
 		self.ratingStars = 0;
 	};	
+	
+	self.fav = false
+	
+	self.favorite = function () {
+		self.fav = !self.fav	
+	}
 });

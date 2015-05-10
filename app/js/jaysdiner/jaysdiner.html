@@ -7,7 +7,7 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star-empty"></span>
-                        <button class="btn btn-danger" style="float:right;">
+                        <button class= "btn" ng-class="{'btn-danger': jaysCtrl.fav==true, 'btn-default': jaysCtrl.fav==false}" ng-click="jaysCtrl.favorite()" style="float:right;">
                             <span class="glyphicon glyphicon-heart"></span>
                             Favorite
                         </button>

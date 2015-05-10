@@ -4,6 +4,8 @@ app.controller("EntertainmentController", function () {
 
 	self = this;
 	
+	self.sorting = 'distance'
+	
 	self.locations = [
 		{ 
 			title : "Lazer Base",
