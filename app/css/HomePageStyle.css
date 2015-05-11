@@ -65,6 +65,7 @@ a:hover{
 .carouselPic{
     margin-left: auto;
     margin-right: auto;
+    height:20px;
     padding-bottom:0;
     margin-bottom: 0;
 }
@@ -210,4 +211,12 @@ a:hover{
 }
 .commentBox{
 overflow: hidden;
+}
+.categoryThumbnail{
+    width:75px;
+    height:75px;
+}
+.storeTitle{
+    font-size:18px;
+    color:black;
 }
