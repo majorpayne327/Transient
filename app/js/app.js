@@ -50,7 +50,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 	}).state('result.searchterms', {
 		url: '/{result}',
 		templateUrl: function($stateParams) {
-			return '/js/' + $stateParams.result + '/' + $stateParams.result + '.html'			
+			return '/js/' + $stateParams.result.replace("[^A-Za-z0-9]").toLowerCase() + '/' + $stateParams.result.replace("[^A-Za-z0-9]", "").toLowerCase() + '.html'			
 		},
 		data: { 
 			css: function($stateParams) {

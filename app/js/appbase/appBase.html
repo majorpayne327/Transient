@@ -8,7 +8,8 @@
 
     <div class="headerSearchBar">
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="'Laser Tag', 'Bars', 'Boston'..." ng-model="searchTerms">
+            <input type="text" class="form-control" placeholder="'Laser Tag', 'Bars', 'Boston'..." ng-model="appCtrl.searchTerms" ng-change="appCtrl.updatePageName()">
+            {{ appCtrl.pageName }}
             <div class="input-group-btn">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" >
                     Distance <span class="caret"></span>
@@ -21,7 +22,7 @@
                     <li class="divider"></li>
                     <li><a href="#">Switch to km?</a></li>
                 </ul>
-                <button class="btn btn-default" type="button" ui-sref="result.searchterms({ loc: appCtrl.baseLoc, result: searchTerms })"S>
+                <button class="btn btn-default" type="button" ui-sref="result.searchterms({ loc: appCtrl.baseLoc, result: appCtrl.searchTerms })"S>
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                 </button>
             </div>
